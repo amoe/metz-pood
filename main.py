@@ -4,7 +4,7 @@ class Wheel:
         self.tire = tire
 
     def diameter(self):
-        return rim * (tire * 2)
+        return self.rim + (self.tire * 2)
 
 class Gear:
     def __init__(self, chainring, cog, rim, tire):
