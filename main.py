@@ -7,14 +7,13 @@ class Wheel:
         return self.rim + (self.tire * 2)
 
 class Gear:
-    def __init__(self, chainring, cog, rim, tire):
+    def __init__(self, chainring, cog, wheel):
         self.chainring = chainring
         self.cog = cog
-        self.rim = rim
-        self.tire = tire
+        self.wheel = wheel
 
     def gear_inches(self):
-        return self.ratio() * Wheel(self.rim, self.tire).diameter()
+        return self.ratio() * self.wheel.diameter()
 
     def ratio(self):
         return self.chainring / float(self.cog)
