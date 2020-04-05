@@ -14,7 +14,7 @@ class Gear:
         self.tire = tire
 
     def gear_inches(self):
-        return self.ratio() * Wheel(rim, tire).diameter()
+        return self.ratio() * Wheel(self.rim, self.tire).diameter()
 
     def ratio(self):
-        return self.chainring / self.cog.to_f()
+        return self.chainring / float(self.cog)
