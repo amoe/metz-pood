@@ -18,7 +18,7 @@ def test_calculates_gear_inches_with_real_dependency():
     assert gear.gear_inches() == approx(137.1, rel=1e-4)
 
 
-# Use a test double.
+# Use a test double.  This is not a mock!
 def test_calculates_gear_inches_with_test_double():
     chainring = 52
     cog = 11
