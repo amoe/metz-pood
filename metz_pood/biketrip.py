@@ -36,11 +36,4 @@ class Trip:
 
     def prepare(self, preparers):
         for preparer in preparers:
-            if isinstance(preparer, Mechanic):
-                preparer.prepare_bicycle(self.bicycles)
-            elif isinstance(preparer, TripCoordinator):
-                preparer.buy_food(self.customers)
-            elif isinstance(preparer, Driver):
-                preparer.gas_up(self.vehicle)
-                preparer.fill_water_tank(self.vehicle)
-            
+            preparer.prepare_trip(self)            
