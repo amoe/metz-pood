@@ -23,4 +23,4 @@ class Gear:
         # This method is a 'command' in the Metz sense.  It can potentially
         # have side effects, its value is not used.  As such we must test
         # that it gets sent, using a mock.
-        observer.changed(self.chainring, self.cog)
+        self.observer.changed(self.chainring, self.cog)
