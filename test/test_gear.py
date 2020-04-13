@@ -2,12 +2,15 @@ from pytest import approx
 import pytest
 from metz_pood.gear import Gear
 from metz_pood.wheel import Wheel
-
+from metz_pood.role_predicates import is_diameterizable
 from unittest.mock import Mock
 
 class DiameterDouble:
     def diameter(self):
         return 10
+
+def test_diameter_double_is_diameterizable():
+    assert is_diameterizable(DiameterDouble())
 
 # Use the real Wheel class to provide the hidden diameter calculation.
 def test_calculates_gear_inches_with_real_dependency():
