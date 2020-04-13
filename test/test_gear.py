@@ -1,5 +1,6 @@
 from pytest import approx
-from main import Gear, Wheel
+from metz_pood.gear import Gear
+from metz_pood.wheel import Wheel
 
 class DiameterDouble:
     def diameter(self):

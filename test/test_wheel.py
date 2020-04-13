@@ -1,4 +1,4 @@
-from main import Wheel
+from metz_pood.wheel import Wheel
 from pytest import approx, fixture
 
 @fixture
