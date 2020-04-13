@@ -6,8 +6,12 @@ from pytest import approx, fixture
 def wheel():
     return Wheel(26, 1.5)
 
+
+def is_diameterizable(obj):
+    return responds_to(obj, 'diameter')
+
 def test_calculates_diameter(wheel):
     assert wheel.diameter() == approx(29)
 
 def test_implements_the_diameterizable_interface(wheel):
-    assert responds_to(wheel, 'diameter')
+    assert is_diameterizable(wheel)
