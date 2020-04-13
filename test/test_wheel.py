@@ -7,7 +7,7 @@ def wheel():
     return Wheel(26, 1.5)
 
 def test_calculates_diameter(wheel):
-    assert wheel.diameter() == approx(29)
+    assert wheel.width() == approx(29)
 
 def test_implements_the_diameterizable_interface(wheel):
     assert is_diameterizable(wheel)

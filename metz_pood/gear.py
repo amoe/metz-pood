@@ -6,7 +6,7 @@ class Gear:
         self.observer = observer
 
     def gear_inches(self):
-        return self.ratio() * self.wheel.diameter()
+        return self.ratio() * self.wheel.width()
 
     def ratio(self):
         return self.chainring / float(self.cog)

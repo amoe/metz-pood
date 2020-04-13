@@ -3,5 +3,5 @@ class Wheel:
         self.rim = rim
         self.tire = tire
 
-    def diameter(self):
+    def width(self):
         return self.rim + (self.tire * 2)

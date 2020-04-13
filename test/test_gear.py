@@ -6,7 +6,7 @@ from metz_pood.role_predicates import is_diameterizable
 from unittest.mock import Mock
 
 class DiameterDouble:
-    def diameter(self):
+    def width(self):
         return 10
 
 def test_diameter_double_is_diameterizable():
