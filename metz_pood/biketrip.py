@@ -6,9 +6,16 @@ class Mechanic:
     def prepare_bicycle(self, bicycle):
         pass
 
+    def prepare_trip(self, trip):
+        for bicycle in trip.bicycles:
+            self.prepare_bicycle(bicycle)
+
 class TripCoordinator:
     def buy_food(self, customers):
         pass
+
+    def prepare_trip(self, trip):
+        self.buy_food(trip.customers)
     
 class Driver:
     def gas_up(self, vehicle):
@@ -16,6 +23,10 @@ class Driver:
 
     def fill_water_tank(self, vehicle):
         pass
+
+    def prepare_trip(self, trip):
+        self.gas_up(trip.vehicle)
+        self.fill_water_tank(trip.vehicle)
 
 class Trip:
     def __init__(self, bicycles, customers, vehicle):
