@@ -17,3 +17,5 @@ short term benefit.
 When an method call on a collaborator is a query, don't test that the query
 itself gets sent, simply blackbox-test the return value (or side effect) of the
 method that sends the query.
+
+
