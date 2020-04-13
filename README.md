@@ -18,4 +18,7 @@ When an method call on a collaborator is a query, don't test that the query
 itself gets sent, simply blackbox-test the return value (or side effect) of the
 method that sends the query.
 
+## 9.5
 
+Metz refers to the brittle tests problem as the 'living the dream' problem; this
+is where you create a virtual world in your tests.
