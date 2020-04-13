@@ -42,3 +42,12 @@ def test_notifies_observers_when_cogs_change():
     mock_observer.changed.assert_called_with(52, 27)
 
     
+def test_notifies_observers_when_chainrings_change():
+    mock_observer = Mock()
+    chainring = 52
+    cog = 11
+    gear = Gear(chainring, cog, DiameterDouble(), mock_observer)
+    gear.set_chainring(42)
+    mock_observer.changed.assert_called_with(42, 11)
+
+    
