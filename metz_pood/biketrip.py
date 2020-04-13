@@ -16,3 +16,20 @@ class Driver:
 
     def fill_water_tank(self, vehicle):
         pass
+
+class Trip:
+    def __init__(self, bicycles, customers, vehicle):
+        self.bicycles = bicycles
+        self.customers = customers
+        self.vehicle = vehicle
+
+    def prepare(self, preparers):
+        for preparer in preparers:
+            if isinstance(preparer, Mechanic):
+                preparer.prepare_bicycle(self.bicycles)
+            elif isinstance(preparer, TripCoordinator):
+                preparer.buy_food(self.customers)
+            elif isinstance(preparer, Driver):
+                preparer.gas_up(self.vehicle)
+                preparer.fill_water_tank(self.vehicle)
+            
