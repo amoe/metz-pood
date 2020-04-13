@@ -10,7 +10,6 @@ class DiameterDouble:
         return 10
 
 # Use the real Wheel class to provide the hidden diameter calculation.
-@pytest.mark.skip
 def test_calculates_gear_inches_with_real_dependency():
     chainring = 52
     cog = 11
@@ -18,18 +17,16 @@ def test_calculates_gear_inches_with_real_dependency():
     tire = 1.5
 
     wheel = Wheel(rim, tire)
-    gear = Gear(chainring, cog, wheel)
+    gear = Gear(chainring, cog, wheel, None)
     
     assert gear.gear_inches() == approx(137.1, rel=1e-4)
 
 
 # Use a test double.  This is not a mock!
-@pytest.mark.skip
 def test_calculates_gear_inches_with_test_double():
     chainring = 52
     cog = 11
-
-    gear = Gear(chainring, cog, DiameterDouble())
+    gear = Gear(chainring, cog, DiameterDouble(), None)
     
     assert gear.gear_inches() == approx(47.27, rel=1e-4)
 
