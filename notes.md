@@ -29,5 +29,4 @@ calculate
 time budget up until mid may -- 1/3 time from shl afterward plus whatever else
 we get funding for 
 
-
 store and process
