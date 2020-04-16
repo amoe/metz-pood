@@ -1,3 +1,75 @@
+# 2020-04-15
+
+> Alex 14:18 Not in this version of the spreadsheet. Columns P, Q (and R) could be
+> parsed for these, though. If a circuit/org name appears in P, then the Person in
+> question was a ‘key person’, and if in ‘P’ then it was the main circuit with
+> which they were involved. R refers to the geographical zones in which they were
+> active.
+
+column C -- cluster join reference
+column D -- rank reference where it was missed
+column F -- extra relation type
+column G -- extra relation cluster reference
+
+column H -- canonical firstname
+column I -- canonical lastname
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 2020-04-09
 
 aliases and fieldnames -- associate them to personclusters
