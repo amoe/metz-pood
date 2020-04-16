@@ -17,7 +17,7 @@ class Bicycle:
 
     def default_tire_size(self):
         raise NotImplementedError()
-    
+
     def post_initialize(self, opts):
         pass
 
@@ -27,7 +27,7 @@ class Bicycle:
     def default_chain(self):
         return "11-speed"
 
-
+# Bicycle uses the template method pattern.
 class RoadBike(Bicycle):
     def post_initialize(self, opts):
         self.tape_color = opts.get('tape_color')
