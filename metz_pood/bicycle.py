@@ -32,7 +32,6 @@ class RoadBike(Bicycle):
     def post_initialize(self, opts):
         self.tape_color = opts.get('tape_color')
         
-
     def local_spares(self):
         return {
             'tape_color': self.tape_color

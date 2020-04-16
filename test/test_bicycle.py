@@ -36,7 +36,8 @@ def test_bicycle():
         b.default_tire_size()
 
 def test_roadbike():
-    rb = RoadBike()
+    rb = RoadBike(tape_color='red')
     assert_fulfils_bicycle_role(rb)
     assert_fulfils_bicycle_subclass_requirements(rb)
+    assert rb.local_spares()['tape_color'] == 'red'
 
