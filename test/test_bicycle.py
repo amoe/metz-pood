@@ -2,6 +2,7 @@ from metz_pood.bicycle import Bicycle, RoadBike
 from metz_pood.test_utility import responds_to
 from metz_pood.role_predicates import assert_is_bicycle
 import pytest
+from pytest import raises
 
 
 # Because this fn is defined within an actual pytest file, its functions
@@ -25,8 +26,14 @@ def assert_fulfils_bicycle_subclass_requirements(obj):
     assert responds_to(obj, 'default_tire_size')
 
 
+# Bicycle is an abstract superclass.
 def test_bicycle():
-    assert_fulfils_bicycle_role(Bicycle(tire_size=0))
+    b = Bicycle(tire_size=0)
+    assert_fulfils_bicycle_role(b)
+    # Test that the superclass forces its subclasses to implement the
+    # abstract method 'default_tire_size'.
+    with pytest.raises(NotImplementedError):
+        b.default_tire_size()
 
 def test_roadbike():
     rb = RoadBike()
